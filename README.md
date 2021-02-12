@@ -10,7 +10,7 @@ This model is then compared to an Azure AutoML run.
 
 The dataset that is used for the implementation of this project is UCI Bank Marketing Dataset. This dataset contains 20 features and 10000 rows. The problem is a classification problem in which we have to predict whether the client will subscribe to a term deposit or not.
 
-The problem is solved in two different ways, i.e., using MS Azure Hyperdrive and MS Azure AutoML. The maximum accuracy is achieved by the best-performing automl model, i.e., VotingEnsemble model which is 91.65%. 
+The problem is solved in two different ways, i.e., using MS Azure Hyperdrive and MS Azure AutoML. The maximum accuracy is achieved by the best-performing automl model, i.e., VotingEnsemble model which is 91.62%. 
 
 ## Scikit-learn Pipeline
 
@@ -35,26 +35,43 @@ Early termination policy is specified to automatically terminates poorly perform
 
 ## AutoML
 
-In AutoML run, 38 models are trained out of which the best performing model is Voting Ensemble model, formed by a combination of various other models. This model gave an accuracy of 91.65%. 
-The following json obtained from automl run gives detailed information about the model, its hyperparameters and weights:
-A subset of the hyperparameters obtained from the best performing model is:  
-{  
-        objective='reg:logistic',<br />
-        random_state=0,<br />
-        reg_alpha=1.0416666666666667,<br />
-        reg_lambda=1.5625,<br />
-        scale_pos_weight=1,<br />
-        seed=None, <br />
-        silent=None,<br />
-        subsample=0.8,<br />
-        tree_method='hist',<br />
-        verbose=-10,<br />
-        verbosity=0<br />
-}<br />
+In AutoML run, 35 models are trained out of which the best performing model is Voting Ensemble model, formed by a combination of various other models including XGBoostClassifier, LightGBM, LogisticRegression and RandomForest. This model gave an accuracy of 91.62%. 
 
-The weights of the trained model are: 
+The hyperparameters of one of the xgboostclassifier are as follows:   
+{'base_score': 0.5,  
+ 'booster': 'gbtree',  
+ 'colsample_bylevel': 1,  
+ 'colsample_bynode': 1,  
+ 'colsample_bytree': 0.5,  
+ 'eta': 0.3,  
+ 'gamma': 0,  
+ 'learning_rate': 0.1,  
+ 'max_delta_step': 0,  
+ 'max_depth': 6,  
+ 'max_leaves': 0,  
+ 'min_child_weight': 1,  
+ 'missing': nan,  
+ 'n_estimators': 100,  
+ 'n_jobs': 1,  
+ 'nthread': None,  
+ 'objective': 'reg:logistic',  
+ 'random_state': 0,  
+ 'reg_alpha': 1.7708333333333335,  
+ 'reg_lambda': 2.5,  
+ 'scale_pos_weight': 1,  
+ 'seed': None,  
+ 'silent': None,  
+ 'subsample': 0.7,  
+ 'tree_method': 'auto',  
+ 'verbose': -10,  
+ 'verbosity': 0}  
+ 
+The ensemble weights and algorithms for the trained model are: 
 
-weights=\[0.25, 0.08333333333333333, 0.25, 0.16666666666666666, 0.08333333333333333,0.08333333333333333, 0.08333333333333333\], 
+*ensemble_weights* : \[0.07692307692307693, 0.07692307692307693, 0.3076923076923077, 0.07692307692307693, 0.07692307692307693, 0.07692307692307693, 0.07692307692307693, 0.07692307692307693, 0.15384615384615385\] 
+
+*ensembled_algorithms* : \['XGBoostClassifier', 'LightGBM', 'XGBoostClassifier', 'XGBoostClassifier', 'XGBoostClassifier', 'RandomForest', 'LightGBM', 'LogisticRegression', 'LightGBM'\]  
+
 
 ## Pipeline comparison
 
