@@ -65,5 +65,5 @@ Moreover, we have used cross validation in AutoML run but we didn't use cross va
 
 ## Future work
 
-In this project, Accuracy is used as the primary metric of performance. However, accuracy is not a very good metric of performance for classification problems when there is class imbalance in the dataset. In future we can use better performance metrics such as precision, recall.  
+In this project, Accuracy is used as the primary metric of performance. However, accuracy is not a very good metric of performance for classification problems when there is class imbalance in the dataset. In future we can use SMOTE technique to handle class imbalance, alongwith better performance metrics such as precision, recall to determine whether the model is not overfitting and performing well.  
 
