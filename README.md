@@ -75,7 +75,7 @@ The ensemble weights and algorithms for the trained model are:
 
 ## Pipeline comparison
 
-The maximum accuracy achieved by Hyperdrive logistic regression model is 91.22% whereas the best performing automl model i.e. VotingEnsemble model achieved an overall accuracy of 91.65%. 
+The maximum accuracy achieved by Hyperdrive logistic regression model is 91.22% whereas the best performing automl model i.e. VotingEnsemble model achieved an overall accuracy of 91.62%. 
 
 The main difference between the Hyperdrive and AutoML approaches used in this project is that in the Hyperdrive approach, we need to select the Machine Learning algorithm, which is Logistic Regression in this case, before tuning its hyperparameters with the Hyperdrive package. Whereas in the AutoML approach, all the steps from selecting a suitable machine learning model for the problem to the hyperparameters tuning and model training is achieved by AutoML.
 
