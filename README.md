@@ -86,4 +86,4 @@ Moreover, we have used cross validation in AutoML run but we didn't use cross va
 In this project, Accuracy is used as the primary metric of performance. However, accuracy is not a very good metric of performance for classification problems when there is class imbalance in the dataset. In future we can use class imbalance handling techniques such as SMOTE, alongwith better performance metrics such as precision, recall to determine whether the model is not overfitting and performing well.
 
 ## Proof of cluster clean up
-
+![](Cluster%20Clean%20Up%20Proof.png)
