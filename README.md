@@ -35,7 +35,8 @@ Early termination policy is specified to automatically terminates poorly perform
 
 ## AutoML
 
-In AutoML run, 38 models are trained out of which the best performing model is Voting Ensemble model which gave an accuracy of 91.65%.
+In AutoML run, 38 models are trained out of which the best performing model is Voting Ensemble model, formed by a combination of various other models. This model gave an accuracy of 91.65%. 
+The following json obtained from automl run gives detailed information about the model, its hyperparameters and weights:
 A subset of the hyperparameters obtained from the best performing model is:  
 {  
         objective='reg:logistic',<br />
@@ -65,5 +66,7 @@ Moreover, we have used cross validation in AutoML run but we didn't use cross va
 
 ## Future work
 
-In this project, Accuracy is used as the primary metric of performance. However, accuracy is not a very good metric of performance for classification problems when there is class imbalance in the dataset. In future we can use SMOTE technique to handle class imbalance, alongwith better performance metrics such as precision, recall to determine whether the model is not overfitting and performing well.  
+In this project, Accuracy is used as the primary metric of performance. However, accuracy is not a very good metric of performance for classification problems when there is class imbalance in the dataset. In future we can use class imbalance handling techniques such as SMOTE, alongwith better performance metrics such as precision, recall to determine whether the model is not overfitting and performing well.
+
+## Proof of cluster clean up
 
