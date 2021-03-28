@@ -37,34 +37,38 @@ Early termination policy is specified to automatically terminates poorly perform
 
 In AutoML run, 35 models are trained out of which the best performing model is Voting Ensemble model, formed by a combination of various other models including XGBoostClassifier, LightGBM, LogisticRegression and RandomForest. This model gave an accuracy of 91.62%. 
 
-The hyperparameters of one of the xgboostclassifier are as follows:   
-{'base_score': 0.5,  
- 'booster': 'gbtree',  
- 'colsample_bylevel': 1,  
- 'colsample_bynode': 1,  
- 'colsample_bytree': 0.5,  
- 'eta': 0.3,  
- 'gamma': 0,  
- 'learning_rate': 0.1,  
- 'max_delta_step': 0,  
- 'max_depth': 6,  
- 'max_leaves': 0,  
- 'min_child_weight': 1,  
- 'missing': nan,  
- 'n_estimators': 100,  
- 'n_jobs': 1,  
- 'nthread': None,  
- 'objective': 'reg:logistic',  
- 'random_state': 0,  
- 'reg_alpha': 1.7708333333333335,  
- 'reg_lambda': 2.5,  
- 'scale_pos_weight': 1,  
- 'seed': None,  
- 'silent': None,  
- 'subsample': 0.7,  
- 'tree_method': 'auto',  
- 'verbose': -10,  
- 'verbosity': 0}  
+The hyperparameters of one of the xgboostclassifier are as follows: 
+```commandline
+ {
+   'base_score': 0.5,  
+   'booster': 'gbtree',  
+   'colsample_bylevel': 1,  
+   'colsample_bynode': 1,  
+   'colsample_bytree': 0.5,  
+   'eta': 0.3,  
+   'gamma': 0,  
+   'learning_rate': 0.1,  
+   'max_delta_step': 0,  
+   'max_depth': 6,  
+   'max_leaves': 0,  
+   'min_child_weight': 1,  
+   'missing': nan,  
+   'n_estimators': 100,  
+   'n_jobs': 1,  
+   'nthread': None,  
+   'objective': 'reg:logistic',  
+   'random_state': 0,  
+   'reg_alpha': 1.7708333333333335,  
+   'reg_lambda': 2.5,  
+   'scale_pos_weight': 1,  
+   'seed': None,  
+   'silent': None,  
+   'subsample': 0.7,  
+   'tree_method': 'auto',  
+   'verbose': -10,  
+   'verbosity': 0
+ }
+ ```
  
 The ensemble weights and algorithms for the trained model are: 
 
