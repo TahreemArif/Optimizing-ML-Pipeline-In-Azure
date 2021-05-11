@@ -1,4 +1,4 @@
-# Optimizing an ML Pipeline in Azure
+# Optimizing a ML Pipeline in Azure
 
 ## Overview
 
